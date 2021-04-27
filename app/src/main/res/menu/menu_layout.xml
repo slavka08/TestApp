@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_switch_refresh"
+        android:title="@string/reload_data" />
+    <item
+        android:id="@+id/action_switch_layout"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="@string/action_switch_layout" />
+    <item
+        android:id="@+id/action_switch_filter_age"
+        android:title="@string/sort_age" />
+    <item
+        android:id="@+id/app_bar_switch_gender"
+        android:checkable="true"
+        android:checked="false"
+        android:title="@string/gender_filter"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="never" ></item>
+    <group
+        android:id="@+id/group_filter_gender"
+        android:checkableBehavior="single"
+        android:enabled="false"
+        android:menuCategory="alternative"
+        android:visible="true">
+        <item
+            android:id="@+id/app_bar_switch_gender_m"
+            android:title="@string/male"
+            app:actionLayout="@layout/switch_item" />
+        <item
+            android:id="@+id/app_bar_switch_gender_f"
+            android:title="@string/female"
+            app:actionLayout="@layout/switch_item" />
+    </group>
+
+</menu>
